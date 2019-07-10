@@ -1,10 +1,6 @@
 import { saveInterest } from "./api.js";
 import { bringAllInterests } from "./domStuff.js";
 
-let intName = document.querySelector("#name");
-let intDes = document.querySelector("#description");
-let intCost = document.querySelector("#cost");
-let intCountry = document.querySelector("#country");
 function makeSaveBtnWrk() {
   document.querySelector("#saveBtn").addEventListener("click", () => {
     // console.log(document.querySelector("#name").value);
@@ -23,7 +19,7 @@ function makeSaveBtnWrk() {
         country: document.querySelector("#country").value
       };
       saveInterest(capturedIntData).then(() => {
-        bringAllInterests;
+        bringAllInterests();
         document.querySelector("#name").value = "";
         document.querySelector("#description").value = "";
         document.querySelector("#cost").value = "";

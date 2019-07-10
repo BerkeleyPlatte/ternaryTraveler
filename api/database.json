@@ -45,6 +45,13 @@
       "cost": "cost",
       "country": "country",
       "id": 1
+    },
+    {
+      "name": "Berkeley",
+      "description": "grewhgs",
+      "cost": "ghjdl",
+      "country": "Italy",
+      "id": 2
     }
   ]
 }

@@ -10,22 +10,32 @@
 
   <body>
     <header>Welcome, Ternary Traveler!</header>
+    <div id="openingDiv">
+      <label>Where You At?</label>
+      <select id="initApp">
+        <option value="Italy">Italy</option>
+        <option value="Switzerland">Switzerland</option>
+        <option value="France">France</option>
+      </select>
+    </div>
     <button id="openBtn">Open</button>
     <button id="addBtn" class="hidden">Add A Place</button>
+    <div id="addForm" class="hidden">
+      <label>Name</label>
+      <input type="text" id="name" />
+      <label>Description</label>
+      <input type="text" id="description" />
+      <label>Cost</label>
+      <input type="text" id="cost" />
+      <label>Country</label>
+      <select id="country">
+        <option value="Italy">Italy</option>
+        <option value="Switzerland">Switzerland</option>
+        <option value="France">France</option>
+      </select>
+      <button id="saveBtn">Save</button>
+    </div>
     <article id="container"></article>
-    <!-- <div id="addForm" class="hidden">
-        <label>Name</label>
-        <input type="text" id="name" />
-        <label>Description</label> 
-        <input type="text" id="description" />
-        <label>Cost</label> 
-        <input type="text" id="cost" />
-        <label>Country</label>
-        <select id="country">
-            <option value="italy">Italy</option>
-            <option value="switzerland">Switzerland</option>
-            <option value="france">France</option>
-        </select>
-        <button id="saveBtn">Save</button> -->
+    <input type="text" class="hidden" />
   </body>
 </html>

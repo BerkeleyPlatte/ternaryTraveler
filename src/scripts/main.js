@@ -16,3 +16,15 @@ getInterests().then(interests => {
 });
 makeAddBtnWrk();
 // makeSaveBtnWrk()
+
+function setPlace() {
+  getPlaces().then(places => {
+    places.forEach(place => {
+      if (document.querySelector("#initApp").value === place.name) {
+        sessionStorage.setItem("placeId", place.id)
+      }
+    })
+  })
+}
+
+export {setPlace}

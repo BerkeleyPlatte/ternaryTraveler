@@ -22,23 +22,29 @@
     "name": "typicode"
   },
   "places": [
-    { 
-      "id": 1, 
-      "name": "Italy", 
-      "visa_required": false 
+    {
+      "id": 1,
+      "name": "Italy",
+      "visa_required": false
     },
-    { 
-      "id": 2, 
-      "name": "Switzerland", 
-      "visa_required": true 
+    {
+      "id": 2,
+      "name": "Switzerland",
+      "visa_required": true
     },
-    { 
-      "id": 3, 
-      "name": "France", 
+    {
+      "id": 3,
+      "name": "France",
       "visa_required": false
     }
   ],
   "interests": [
-    
+    {
+      "name": "name",
+      "description": "description",
+      "cost": "cost",
+      "country": "country",
+      "id": 1
+    }
   ]
 }

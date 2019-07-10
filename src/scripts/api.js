@@ -18,4 +18,13 @@ function saveInterest(int) {
   });
 }
 
-export { getPlaces, getInterests, saveInterest };
+function deleteInterest(num) {
+  return fetch(`http://localhost:8088/interests/${num}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(res => res.json());
+}
+
+export { getPlaces, getInterests, saveInterest, deleteInterest };

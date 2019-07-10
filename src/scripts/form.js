@@ -1,30 +1,34 @@
 import { saveInterest } from "./api.js";
+import { bringAllInterests } from "./domStuff.js";
 
-let intName = document.querySelector("name");
+let intName = document.querySelector("#name");
 let intDes = document.querySelector("#description");
 let intCost = document.querySelector("#cost");
 let intCountry = document.querySelector("#country");
 function makeSaveBtnWrk() {
   document.querySelector("#saveBtn").addEventListener("click", () => {
-    // console.log(intCost);
+    // console.log(document.querySelector("#name").value);
     if (
-        intName.value === "" &&
-        intDes.value === "" &&
-        intCost.value === ""
+      document.querySelector("#description").value === "" ||
+      document.querySelector("#name").value === "" ||
+      document.querySelector("#cost").value === "" ||
+      document.querySelector("#country").value === ""
     ) {
-        alert("All Fields Required")
+      alert("All Fields Required");
     } else {
-    let capturedIntData = {
-      name: intName.value,
-      description: intDes.value,
-      cost: intCost.value,
-      country: intCountry.value
-    };
-    saveInterest(capturedIntData);
-    intName.value = "";
-    intDes.value = "";
-    intCost.value = "";
-    intCountry.value = "";
+      let capturedIntData = {
+        name: document.querySelector("#name").value,
+        description: document.querySelector("#description").value,
+        cost: document.querySelector("#cost").value,
+        country: document.querySelector("#country").value
+      };
+      saveInterest(capturedIntData).then(() => {
+        bringAllInterests;
+        document.querySelector("#name").value = "";
+        document.querySelector("#description").value = "";
+        document.querySelector("#cost").value = "";
+        document.querySelector("#country").value = "";
+      });
     }
   });
 }
